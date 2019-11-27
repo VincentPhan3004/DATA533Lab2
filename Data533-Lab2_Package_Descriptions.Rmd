@@ -1,0 +1,64 @@
+---
+title: 'DATA 533: ASSIGNMENT 2 - PROPOSAL'
+author: 'CLAUDIA NIKEL & NGHIA PHAN TRONG '
+date: "11/20/2019"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Food and Beverage Management Package 
+
+### Package Description
+
+    This package is used to manage businesses in Food and Beverage. It stores information about businesses and their staff. There are two subpackages Operation Management and Human Resource Management. 
+  
+#### Subpackage 1: Operation Management   
+The Operation Management subpackage deals with information about businesses and the delivery services it provides. It also compares revenue between businesses and staff transfers. This subpackage is desgined to help manage and organize multiple food and beverage businesses and compare information between the two. Within the subpackage there is two modules, FnBClass and FnBFunction. <br/>
+
+
+
+* **FnBClass Module**: This module allows creating of objects related to the operation of FnB Business. There is two classes within this module: FnB and DeliveryFnB, which store information on each business and their delivery service provider (i.e. Uberats). <br/> <br/>
+
+  - **Class FnB()** : This class stores information on the business which include address, instorestaff, area, revenue. 
+      * An instance of this class has the attributes: address, instorestaff, area, revenue <br/><br/>
+      
+  - **Class DeliveryFnB (FnB)**: This class includes additional information about the business: which food delivery service it provides. 
+      * This class is inherited from the FnB class with additional attributess: deliverychannel. An instance of this class has the attributes: address, instorestaff, area, revenue, deliverychannel. <br/> <br/>
+  
+* **FnBFunction**: This module contains two functions, <code>comparerevenue</code> that compares two businesses revenue in relation to their size and <code>stafftransfer</code> which transfers staff from one business to the other. <br/> <br/>
+
+  - **comparerevenue(A,B)**: This function compares the revenue of two businesses based on the size of their building. 
+      * This function takes two parameters: business A and B. It calculates the profit rate of business A and B by dividing the revenue of each business by their respective area. It then compares the profit rate of business A and B and returns the business with the highest profit rate. <br/><br/>
+      
+  - **stafftransfer(A,B,n)**: This function transfers staff from one business to another. 
+      * This function takes three parameters: business A, business B and n (the amount of staff to transfer). the class transfers n staffs from business B to business A. It will then return the updated number of staff (staffnum) for each business, A and B and return TRUE upon completion. If the transfer of staff is incomplete it returns FALSE.  <br/><br/> 
+    
+    
+
+#### Subpackage 2: Human Resource Management
+The Human Resource Management subpackage deals with information about employees and managers. It also 
+
+
+* **StaffClass Module**: This module allows creating of objects related to managing employees in a FnB Business. There is two classes within this module: Staff and Manager, which store information on each staff member and their managers. <br/> <br/>
+
+  - **Class Staff()**: This class stores information about a specific employee.
+      * An instance of this class has attributes: id, name, salary, entry year, last_promotion_year, store name, title, supervisor. <br/><br/>
+      
+  - **Class Manager(Staff)**: This class includes additional information about an employee: staffflist, which is a list of IDs corresponding to employees that anpther employee directly manages. 
+      * This class is inherited from the Staff class with additional attributess: stafflist. An instance of this class has the attributes: id, name, salary, entry year, last_promotion_year, store name, title, supervisor, stafflist. <br/><br/>
+    
+* **HRfunction**: This module contains two functions, <code>promotioncheck</code> which increases the salary of an employee based on if they get a promotion and <code>_____</code> which  .<br/> <br/>
+
+  - **promotioncheck(employeelist)**: This function will increase the salary of employees by 10% for every 2 years they have been working at the business. This function will validate a list of employee and apply promotion if possible.
+      * This function takes one parameter, which is a list of employees
+
+  
+  
+     
+
