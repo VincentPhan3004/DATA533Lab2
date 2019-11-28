@@ -3,9 +3,9 @@ title: 'DATA 533: ASSIGNMENT 2 - PROPOSAL'
 author: 'CLAUDIA NIKEL & NGHIA PHAN TRONG '
 date: "11/20/2019"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
-  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -18,10 +18,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
     This package is used to manage businesses in Food and Beverage. It stores information about businesses and their staff. There are two subpackages Operation Management and Human Resource Management. 
   
-#### Subpackage 1: Operation Management   
+#### Subpackage OP: Operation Management   
 The Operation Management subpackage deals with information about businesses and the delivery services it provides. It also compares revenue between businesses and staff transfers. This subpackage is desgined to help manage and organize multiple food and beverage businesses and compare information between the two. Within the subpackage there is two modules, FnBClass and FnBFunction. <br/>
-
-
 
 * **FnBClass Module**: This module allows creating of objects related to the operation of FnB Business. There is two classes within this module: FnB and DeliveryFnB, which store information on each business and their delivery service provider (i.e. Uberats). <br/> <br/>
 
@@ -41,7 +39,7 @@ The Operation Management subpackage deals with information about businesses and 
     
     
 
-#### Subpackage 2: Human Resource Management
+#### Subpackage HR: Human Resource Management
 The Human Resource Management subpackage deals with information about employees and managers. It also 
 
 
@@ -53,12 +51,10 @@ The Human Resource Management subpackage deals with information about employees 
   - **Class Manager(Staff)**: This class includes additional information about an employee: staffflist, which is a list of IDs corresponding to employees that anpther employee directly manages. 
       * This class is inherited from the Staff class with additional attributess: stafflist. An instance of this class has the attributes: id, name, salary, entry year, last_promotion_year, store name, title, supervisor, stafflist. <br/><br/>
     
-* **HRfunction**: This module contains two functions, <code>promotioncheck</code> which increases the salary of an employee based on if they get a promotion and <code>_____</code> which  .<br/> <br/>
+* **HRfunction**: This module contains two functions
 
-  - **promotioncheck(employeelist)**: This function will increase the salary of employees by 10% for every 2 years they have been working at the business. This function will validate a list of employee and apply promotion if possible.
-      * This function takes one parameter, which is a list of employees
-
-  
+  - **promoteheck(employeelist)**: The turn ID of staffs in the list who has no promotion in two year since the last promotion until the end of the current year.
+  - **serviceCheck(employeelist)**: The turn ID of staffs in the list who have  smallest entry year.
   
      
 
